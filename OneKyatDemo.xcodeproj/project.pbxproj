@@ -1,0 +1,748 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D53B374C7762EB64879C09D /* Pods_OneKyatDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D5A1E68F003C5ECADF5903 /* Pods_OneKyatDemoTests.framework */; };
+		3AE6E312E7B55AE91D5B885C /* Pods_OneKyatDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D495D4BEB6E58E00E68019A1 /* Pods_OneKyatDemo.framework */; };
+		7D94C26127A40C0800DFCCBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C26027A40C0800DFCCBB /* AppDelegate.swift */; };
+		7D94C26327A40C0800DFCCBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C26227A40C0800DFCCBB /* SceneDelegate.swift */; };
+		7D94C26527A40C0800DFCCBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C26427A40C0800DFCCBB /* ViewController.swift */; };
+		7D94C26827A40C0800DFCCBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D94C26627A40C0800DFCCBB /* Main.storyboard */; };
+		7D94C26A27A40C0800DFCCBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D94C26927A40C0800DFCCBB /* Assets.xcassets */; };
+		7D94C26D27A40C0800DFCCBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D94C26B27A40C0800DFCCBB /* LaunchScreen.storyboard */; };
+		7D94C27827A40C0800DFCCBB /* OneKyatDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C27727A40C0800DFCCBB /* OneKyatDemoTests.swift */; };
+		7D94C28227A40C0800DFCCBB /* OneKyatDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C28127A40C0800DFCCBB /* OneKyatDemoUITests.swift */; };
+		7D94C28427A40C0800DFCCBB /* OneKyatDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C28327A40C0800DFCCBB /* OneKyatDemoUITestsLaunchTests.swift */; };
+		89E3A43BF5BF56B51F085765 /* Pods_OneKyatDemo_OneKyatDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42A3CDA8199DDD45D533EB5 /* Pods_OneKyatDemo_OneKyatDemoUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D94C27427A40C0800DFCCBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D94C25527A40C0800DFCCBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D94C25C27A40C0800DFCCBB;
+			remoteInfo = OneKyatDemo;
+		};
+		7D94C27E27A40C0800DFCCBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D94C25527A40C0800DFCCBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D94C25C27A40C0800DFCCBB;
+			remoteInfo = OneKyatDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05D5A1E68F003C5ECADF5903 /* Pods_OneKyatDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneKyatDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		135CB75C77B488F376FF0A97 /* Pods-OneKyatDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneKyatDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-OneKyatDemoTests/Pods-OneKyatDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D295EDF5ACFFEC8C5C58E0D /* Pods-OneKyatDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneKyatDemoTests.release.xcconfig"; path = "Target Support Files/Pods-OneKyatDemoTests/Pods-OneKyatDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		594909FEB19BE795F1567EEF /* Pods-OneKyatDemo-OneKyatDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneKyatDemo-OneKyatDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-OneKyatDemo-OneKyatDemoUITests/Pods-OneKyatDemo-OneKyatDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		63BCF5D646BC54DF316116A6 /* Pods-OneKyatDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneKyatDemo.debug.xcconfig"; path = "Target Support Files/Pods-OneKyatDemo/Pods-OneKyatDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7D94C25D27A40C0800DFCCBB /* OneKyatDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneKyatDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D94C26027A40C0800DFCCBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D94C26227A40C0800DFCCBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7D94C26427A40C0800DFCCBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D94C26727A40C0800DFCCBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D94C26927A40C0800DFCCBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D94C26C27A40C0800DFCCBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D94C26E27A40C0800DFCCBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D94C27327A40C0800DFCCBB /* OneKyatDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneKyatDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D94C27727A40C0800DFCCBB /* OneKyatDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneKyatDemoTests.swift; sourceTree = "<group>"; };
+		7D94C27D27A40C0800DFCCBB /* OneKyatDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneKyatDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D94C28127A40C0800DFCCBB /* OneKyatDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneKyatDemoUITests.swift; sourceTree = "<group>"; };
+		7D94C28327A40C0800DFCCBB /* OneKyatDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneKyatDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A2B2BF9DA2DE261253F7134 /* Pods-OneKyatDemo-OneKyatDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneKyatDemo-OneKyatDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-OneKyatDemo-OneKyatDemoUITests/Pods-OneKyatDemo-OneKyatDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9A86A0F6FF681FFEC865D465 /* Pods-OneKyatDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneKyatDemo.release.xcconfig"; path = "Target Support Files/Pods-OneKyatDemo/Pods-OneKyatDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D42A3CDA8199DDD45D533EB5 /* Pods_OneKyatDemo_OneKyatDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneKyatDemo_OneKyatDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D495D4BEB6E58E00E68019A1 /* Pods_OneKyatDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneKyatDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D94C25A27A40C0800DFCCBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE6E312E7B55AE91D5B885C /* Pods_OneKyatDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D94C27027A40C0800DFCCBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D53B374C7762EB64879C09D /* Pods_OneKyatDemoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D94C27A27A40C0800DFCCBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89E3A43BF5BF56B51F085765 /* Pods_OneKyatDemo_OneKyatDemoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78A30AB4FEEBC0B20DFEFE28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63BCF5D646BC54DF316116A6 /* Pods-OneKyatDemo.debug.xcconfig */,
+				9A86A0F6FF681FFEC865D465 /* Pods-OneKyatDemo.release.xcconfig */,
+				594909FEB19BE795F1567EEF /* Pods-OneKyatDemo-OneKyatDemoUITests.debug.xcconfig */,
+				9A2B2BF9DA2DE261253F7134 /* Pods-OneKyatDemo-OneKyatDemoUITests.release.xcconfig */,
+				135CB75C77B488F376FF0A97 /* Pods-OneKyatDemoTests.debug.xcconfig */,
+				2D295EDF5ACFFEC8C5C58E0D /* Pods-OneKyatDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7D94C25427A40C0800DFCCBB = {
+			isa = PBXGroup;
+			children = (
+				7D94C25F27A40C0800DFCCBB /* OneKyatDemo */,
+				7D94C27627A40C0800DFCCBB /* OneKyatDemoTests */,
+				7D94C28027A40C0800DFCCBB /* OneKyatDemoUITests */,
+				7D94C25E27A40C0800DFCCBB /* Products */,
+				78A30AB4FEEBC0B20DFEFE28 /* Pods */,
+				A8A4CE5AB754D37EEA2D413B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7D94C25E27A40C0800DFCCBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D94C25D27A40C0800DFCCBB /* OneKyatDemo.app */,
+				7D94C27327A40C0800DFCCBB /* OneKyatDemoTests.xctest */,
+				7D94C27D27A40C0800DFCCBB /* OneKyatDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D94C25F27A40C0800DFCCBB /* OneKyatDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7D94C26027A40C0800DFCCBB /* AppDelegate.swift */,
+				7D94C26227A40C0800DFCCBB /* SceneDelegate.swift */,
+				7D94C26427A40C0800DFCCBB /* ViewController.swift */,
+				7D94C26627A40C0800DFCCBB /* Main.storyboard */,
+				7D94C26927A40C0800DFCCBB /* Assets.xcassets */,
+				7D94C26B27A40C0800DFCCBB /* LaunchScreen.storyboard */,
+				7D94C26E27A40C0800DFCCBB /* Info.plist */,
+			);
+			path = OneKyatDemo;
+			sourceTree = "<group>";
+		};
+		7D94C27627A40C0800DFCCBB /* OneKyatDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D94C27727A40C0800DFCCBB /* OneKyatDemoTests.swift */,
+			);
+			path = OneKyatDemoTests;
+			sourceTree = "<group>";
+		};
+		7D94C28027A40C0800DFCCBB /* OneKyatDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7D94C28127A40C0800DFCCBB /* OneKyatDemoUITests.swift */,
+				7D94C28327A40C0800DFCCBB /* OneKyatDemoUITestsLaunchTests.swift */,
+			);
+			path = OneKyatDemoUITests;
+			sourceTree = "<group>";
+		};
+		A8A4CE5AB754D37EEA2D413B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D495D4BEB6E58E00E68019A1 /* Pods_OneKyatDemo.framework */,
+				D42A3CDA8199DDD45D533EB5 /* Pods_OneKyatDemo_OneKyatDemoUITests.framework */,
+				05D5A1E68F003C5ECADF5903 /* Pods_OneKyatDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D94C25C27A40C0800DFCCBB /* OneKyatDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D94C28727A40C0900DFCCBB /* Build configuration list for PBXNativeTarget "OneKyatDemo" */;
+			buildPhases = (
+				4422E440A0630BD71A3EFFF6 /* [CP] Check Pods Manifest.lock */,
+				7D94C25927A40C0800DFCCBB /* Sources */,
+				7D94C25A27A40C0800DFCCBB /* Frameworks */,
+				7D94C25B27A40C0800DFCCBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneKyatDemo;
+			productName = OneKyatDemo;
+			productReference = 7D94C25D27A40C0800DFCCBB /* OneKyatDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D94C27227A40C0800DFCCBB /* OneKyatDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D94C28A27A40C0900DFCCBB /* Build configuration list for PBXNativeTarget "OneKyatDemoTests" */;
+			buildPhases = (
+				1EF9E413198CF421B86F803E /* [CP] Check Pods Manifest.lock */,
+				7D94C26F27A40C0800DFCCBB /* Sources */,
+				7D94C27027A40C0800DFCCBB /* Frameworks */,
+				7D94C27127A40C0800DFCCBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D94C27527A40C0800DFCCBB /* PBXTargetDependency */,
+			);
+			name = OneKyatDemoTests;
+			productName = OneKyatDemoTests;
+			productReference = 7D94C27327A40C0800DFCCBB /* OneKyatDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7D94C27C27A40C0800DFCCBB /* OneKyatDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D94C28D27A40C0900DFCCBB /* Build configuration list for PBXNativeTarget "OneKyatDemoUITests" */;
+			buildPhases = (
+				4F2F3D1D3569ECC30E25DF95 /* [CP] Check Pods Manifest.lock */,
+				7D94C27927A40C0800DFCCBB /* Sources */,
+				7D94C27A27A40C0800DFCCBB /* Frameworks */,
+				7D94C27B27A40C0800DFCCBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D94C27F27A40C0800DFCCBB /* PBXTargetDependency */,
+			);
+			name = OneKyatDemoUITests;
+			productName = OneKyatDemoUITests;
+			productReference = 7D94C27D27A40C0800DFCCBB /* OneKyatDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D94C25527A40C0800DFCCBB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					7D94C25C27A40C0800DFCCBB = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					7D94C27227A40C0800DFCCBB = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 7D94C25C27A40C0800DFCCBB;
+					};
+					7D94C27C27A40C0800DFCCBB = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 7D94C25C27A40C0800DFCCBB;
+					};
+				};
+			};
+			buildConfigurationList = 7D94C25827A40C0800DFCCBB /* Build configuration list for PBXProject "OneKyatDemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D94C25427A40C0800DFCCBB;
+			productRefGroup = 7D94C25E27A40C0800DFCCBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D94C25C27A40C0800DFCCBB /* OneKyatDemo */,
+				7D94C27227A40C0800DFCCBB /* OneKyatDemoTests */,
+				7D94C27C27A40C0800DFCCBB /* OneKyatDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D94C25B27A40C0800DFCCBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D94C26D27A40C0800DFCCBB /* LaunchScreen.storyboard in Resources */,
+				7D94C26A27A40C0800DFCCBB /* Assets.xcassets in Resources */,
+				7D94C26827A40C0800DFCCBB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D94C27127A40C0800DFCCBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D94C27B27A40C0800DFCCBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EF9E413198CF421B86F803E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneKyatDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4422E440A0630BD71A3EFFF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneKyatDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F2F3D1D3569ECC30E25DF95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneKyatDemo-OneKyatDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D94C25927A40C0800DFCCBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D94C26527A40C0800DFCCBB /* ViewController.swift in Sources */,
+				7D94C26127A40C0800DFCCBB /* AppDelegate.swift in Sources */,
+				7D94C26327A40C0800DFCCBB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D94C26F27A40C0800DFCCBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D94C27827A40C0800DFCCBB /* OneKyatDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D94C27927A40C0800DFCCBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D94C28227A40C0800DFCCBB /* OneKyatDemoUITests.swift in Sources */,
+				7D94C28427A40C0800DFCCBB /* OneKyatDemoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D94C27527A40C0800DFCCBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D94C25C27A40C0800DFCCBB /* OneKyatDemo */;
+			targetProxy = 7D94C27427A40C0800DFCCBB /* PBXContainerItemProxy */;
+		};
+		7D94C27F27A40C0800DFCCBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D94C25C27A40C0800DFCCBB /* OneKyatDemo */;
+			targetProxy = 7D94C27E27A40C0800DFCCBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D94C26627A40C0800DFCCBB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D94C26727A40C0800DFCCBB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D94C26B27A40C0800DFCCBB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D94C26C27A40C0800DFCCBB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D94C28527A40C0800DFCCBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D94C28627A40C0900DFCCBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D94C28827A40C0900DFCCBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63BCF5D646BC54DF316116A6 /* Pods-OneKyatDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HA4A8Y4KQA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneKyatDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akp.OneKyatDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D94C28927A40C0900DFCCBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A86A0F6FF681FFEC865D465 /* Pods-OneKyatDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HA4A8Y4KQA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneKyatDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akp.OneKyatDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7D94C28B27A40C0900DFCCBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 135CB75C77B488F376FF0A97 /* Pods-OneKyatDemoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HA4A8Y4KQA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akp.OneKyatDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OneKyatDemo.app/OneKyatDemo";
+			};
+			name = Debug;
+		};
+		7D94C28C27A40C0900DFCCBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D295EDF5ACFFEC8C5C58E0D /* Pods-OneKyatDemoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HA4A8Y4KQA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akp.OneKyatDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OneKyatDemo.app/OneKyatDemo";
+			};
+			name = Release;
+		};
+		7D94C28E27A40C0900DFCCBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 594909FEB19BE795F1567EEF /* Pods-OneKyatDemo-OneKyatDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HA4A8Y4KQA;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akp.OneKyatDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OneKyatDemo;
+			};
+			name = Debug;
+		};
+		7D94C28F27A40C0900DFCCBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A2B2BF9DA2DE261253F7134 /* Pods-OneKyatDemo-OneKyatDemoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HA4A8Y4KQA;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akp.OneKyatDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OneKyatDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D94C25827A40C0800DFCCBB /* Build configuration list for PBXProject "OneKyatDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D94C28527A40C0800DFCCBB /* Debug */,
+				7D94C28627A40C0900DFCCBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D94C28727A40C0900DFCCBB /* Build configuration list for PBXNativeTarget "OneKyatDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D94C28827A40C0900DFCCBB /* Debug */,
+				7D94C28927A40C0900DFCCBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D94C28A27A40C0900DFCCBB /* Build configuration list for PBXNativeTarget "OneKyatDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D94C28B27A40C0900DFCCBB /* Debug */,
+				7D94C28C27A40C0900DFCCBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D94C28D27A40C0900DFCCBB /* Build configuration list for PBXNativeTarget "OneKyatDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D94C28E27A40C0900DFCCBB /* Debug */,
+				7D94C28F27A40C0900DFCCBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D94C25527A40C0800DFCCBB /* Project object */;
+}

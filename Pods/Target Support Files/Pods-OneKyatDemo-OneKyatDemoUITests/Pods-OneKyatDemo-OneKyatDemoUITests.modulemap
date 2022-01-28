@@ -1,0 +1,6 @@
+framework module Pods_OneKyatDemo_OneKyatDemoUITests {
+  umbrella header "Pods-OneKyatDemo-OneKyatDemoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

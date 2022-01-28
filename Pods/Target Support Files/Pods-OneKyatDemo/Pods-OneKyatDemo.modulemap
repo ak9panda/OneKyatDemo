@@ -1,0 +1,6 @@
+framework module Pods_OneKyatDemo {
+  umbrella header "Pods-OneKyatDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
