@@ -17,6 +17,9 @@ class AdBannerCollectionViewCell: UICollectionViewCell {
     }
     
     private var currentPage = 0
+    // timer for adbanner
+    var carousalTimer: Timer?
+    var newOffsetX: CGFloat = 0.0
     
     var posterList: [String]? = [] {
         didSet {
@@ -24,6 +27,8 @@ class AdBannerCollectionViewCell: UICollectionViewCell {
                 bannerPageControl.numberOfPages = data.count
                 bannerPageControl.currentPage = 0
                 self.imgBannerCollectionView.reloadData()
+//                self.startTimer()
+                self.startScroll()
             }
         }
     }
@@ -36,6 +41,46 @@ class AdBannerCollectionViewCell: UICollectionViewCell {
         imgBannerCollectionView.register(AdCoverCell.self, forCellWithReuseIdentifier: AdCoverCell.identifier)
     }
 
+}
+
+extension AdBannerCollectionViewCell {
+    func startTimer() {
+        carousalTimer = Timer(fire: Date(), interval: 0.025, repeats: true) { (timer) in
+            let initailPoint = CGPoint(x: self.newOffsetX,y :0)
+            if __CGPointEqualToPoint(initailPoint, self.imgBannerCollectionView.contentOffset) {
+                if self.newOffsetX < self.imgBannerCollectionView.contentSize.width {
+                    self.newOffsetX += 0.25
+                }
+                if self.newOffsetX > self.imgBannerCollectionView.contentSize.width - self.imgBannerCollectionView.frame.size.width {
+                    self.newOffsetX = 0
+                }
+                self.imgBannerCollectionView.contentOffset = CGPoint(x: self.newOffsetX,y :0)
+            } else {
+                self.newOffsetX = self.imgBannerCollectionView.contentOffset.x
+            }
+        }
+        RunLoop.current.add(carousalTimer!, forMode: .common)
+    }
+    
+    @objc func scrollToNextCell(){
+        
+        bannerPageControl.currentPage = currentPage
+        if currentPage == 7 {
+            currentPage = 0
+        }
+        imgBannerCollectionView.isPagingEnabled = true
+        imgBannerCollectionView.scrollToItem(
+            at: IndexPath(item: currentPage, section: 0),
+            at: .centeredHorizontally,
+            animated: true
+        )
+        self.imgBannerCollectionView.setNeedsLayout()
+        currentPage += 1
+    }
+    
+    func startScroll() {
+        _ = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.scrollToNextCell), userInfo: nil, repeats: true);
+    }
 }
 
 extension AdBannerCollectionViewCell: UICollectionViewDataSource, UICollectionViewDelegate {

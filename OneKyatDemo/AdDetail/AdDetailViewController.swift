@@ -31,29 +31,35 @@ class AdDetailViewController: UIViewController {
         setupView()
         setupData(detail: adItemDetail)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
 }
 
 extension AdDetailViewController {
     func setupView() {
+        
         tfMessage.layer.cornerRadius = tfMessage.bounds.height/2
         tfMessage.clipsToBounds = true
         messageView.addTopShadow()
-        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController!.navigationBar.shadowImage = UIImage()
-        self.navigationController!.navigationBar.isTranslucent = true
-//        if #available(iOS 15, *) {
-//            let appearance = UINavigationBarAppearance()
-//            appearance.configureWithOpaqueBackground()
-//            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-//            appearance.backgroundColor = UIColor(red: 0.0/255.0, green: 125/255.0, blue: 0.0/255.0, alpha: 1.0)
-//            UINavigationBar.appearance().standardAppearance = appearance
-//            UINavigationBar.appearance().scrollEdgeAppearance = appearance
-//        }else {
-//            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//            self.navigationController?.navigationBar.shadowImage = UIImage()
-//            self.navigationController?.navigationBar.isTranslucent = true
-//            self.navigationController?.view.backgroundColor = .clear
-//        }
+        if #available(iOS 15, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        }else {
+            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            self.navigationController?.navigationBar.shadowImage = UIImage()
+            self.navigationController?.navigationBar.isTranslucent = true
+            self.navigationController?.view.backgroundColor = .clear
+        }
     }
     
     func setupData(detail: Ads?) {

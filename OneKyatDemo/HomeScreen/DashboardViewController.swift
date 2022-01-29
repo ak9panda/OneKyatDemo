@@ -15,11 +15,16 @@ class DashboardViewController: UIViewController {
     
     var adData: AdListResponse?
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initView()
         initData()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,10 +39,15 @@ class DashboardViewController: UIViewController {
     }
     
     @IBAction func onTouchLogoutBtn(_ sender: Any) {
+        self.showAlertTwoBtn(title: "Logout?", message: "Are you sure.") { _ in
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let appNavigation = AppNavigation(window: appDelegate.window!)
+            appNavigation.LogOutComplete()
+        }
     }
 }
 
-
+// MARK: - Helper Functions
 extension DashboardViewController {
     func initData() {
         if let path = Bundle.main.path(forResource: "OneKyatAd", ofType: "json") {
@@ -122,4 +132,10 @@ extension DashboardViewController: UICollectionViewDelegateFlowLayout {
 
 extension DashboardViewController: UISearchBarDelegate {
     
+}
+
+extension UINavigationController {
+   open override var preferredStatusBarStyle: UIStatusBarStyle {
+      return topViewController?.preferredStatusBarStyle ?? .default
+   }
 }

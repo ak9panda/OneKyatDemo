@@ -15,9 +15,9 @@ extension UIView {
         layer.shadowColor = UIColor.gray.cgColor
         layer.shadowOffset = CGSize(width: 0 , height: 2)
         layer.shadowPath = UIBezierPath(rect: CGRect(x: 0,
-                                                     y: layer.frame.size.height,
+                                                     y: bounds.maxY - layer.shadowRadius,
                                                      width: UIScreen.main.bounds.width - 60,
-                                                     height: layer.shadowRadius)).cgPath
+                                                     height: 1)).cgPath
     }
     
     func addTopShadow() {

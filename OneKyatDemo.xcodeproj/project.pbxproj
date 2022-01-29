@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D53B374C7762EB64879C09D /* Pods_OneKyatDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D5A1E68F003C5ECADF5903 /* Pods_OneKyatDemoTests.framework */; };
 		3AE6E312E7B55AE91D5B885C /* Pods_OneKyatDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D495D4BEB6E58E00E68019A1 /* Pods_OneKyatDemo.framework */; };
+		7D1691AB27A583BA009F3D7C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1691AA27A583BA009F3D7C /* UIViewController+Extension.swift */; };
 		7D1A8DC227A44F93006AB313 /* AdBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1A8DC027A44F93006AB313 /* AdBannerCollectionViewCell.swift */; };
 		7D1A8DC327A44F93006AB313 /* AdBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1A8DC127A44F93006AB313 /* AdBannerCollectionViewCell.xib */; };
 		7D1A8DC627A458A7006AB313 /* OneKyatAd.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D1A8DC527A458A7006AB313 /* OneKyatAd.json */; };
@@ -17,6 +18,7 @@
 		7D49FB1D27A4FC1E0096D00A /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D49FB1C27A4FC1E0096D00A /* Theme.xcassets */; };
 		7D49FB1F27A50CF90096D00A /* AdImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D49FB1E27A50CF90096D00A /* AdImages.xcassets */; };
 		7D49FB2327A51E810096D00A /* AdDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D49FB2227A51E810096D00A /* AdDetailViewController.swift */; };
+		7D4A34E527A5781F00EF6370 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A34E427A5781F00EF6370 /* AppNavigation.swift */; };
 		7D94C26127A40C0800DFCCBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C26027A40C0800DFCCBB /* AppDelegate.swift */; };
 		7D94C26527A40C0800DFCCBB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C26427A40C0800DFCCBB /* LoginViewController.swift */; };
 		7D94C26827A40C0800DFCCBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D94C26627A40C0800DFCCBB /* Main.storyboard */; };
@@ -56,6 +58,7 @@
 		2D295EDF5ACFFEC8C5C58E0D /* Pods-OneKyatDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneKyatDemoTests.release.xcconfig"; path = "Target Support Files/Pods-OneKyatDemoTests/Pods-OneKyatDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		594909FEB19BE795F1567EEF /* Pods-OneKyatDemo-OneKyatDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneKyatDemo-OneKyatDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-OneKyatDemo-OneKyatDemoUITests/Pods-OneKyatDemo-OneKyatDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		63BCF5D646BC54DF316116A6 /* Pods-OneKyatDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneKyatDemo.debug.xcconfig"; path = "Target Support Files/Pods-OneKyatDemo/Pods-OneKyatDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7D1691AA27A583BA009F3D7C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		7D1A8DC027A44F93006AB313 /* AdBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		7D1A8DC127A44F93006AB313 /* AdBannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdBannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		7D1A8DC527A458A7006AB313 /* OneKyatAd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OneKyatAd.json; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		7D49FB1C27A4FC1E0096D00A /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
 		7D49FB1E27A50CF90096D00A /* AdImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AdImages.xcassets; sourceTree = "<group>"; };
 		7D49FB2227A51E810096D00A /* AdDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDetailViewController.swift; sourceTree = "<group>"; };
+		7D4A34E427A5781F00EF6370 /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
 		7D94C25D27A40C0800DFCCBB /* OneKyatDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneKyatDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D94C26027A40C0800DFCCBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D94C26427A40C0800DFCCBB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,14 @@
 			path = AdDetail;
 			sourceTree = "<group>";
 		};
+		7D4A34E627A57D0B00EF6370 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7D94C26427A40C0800DFCCBB /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		7D94C25427A40C0800DFCCBB = {
 			isa = PBXGroup;
 			children = (
@@ -182,12 +194,13 @@
 			isa = PBXGroup;
 			children = (
 				7D1A8DC427A45895006AB313 /* Data */,
+				7D4A34E627A57D0B00EF6370 /* Login */,
 				7D49FB2127A51E5E0096D00A /* AdDetail */,
 				7D94C29827A44A1900DFCCBB /* HomeScreen */,
 				7D94C29527A43C1400DFCCBB /* Extensions */,
 				7D49FB2027A51B790096D00A /* Assets */,
 				7D94C26027A40C0800DFCCBB /* AppDelegate.swift */,
-				7D94C26427A40C0800DFCCBB /* LoginViewController.swift */,
+				7D4A34E427A5781F00EF6370 /* AppNavigation.swift */,
 				7D94C26627A40C0800DFCCBB /* Main.storyboard */,
 				7D94C26B27A40C0800DFCCBB /* LaunchScreen.storyboard */,
 				7D94C26E27A40C0800DFCCBB /* Info.plist */,
@@ -216,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				7D94C29627A43C2E00DFCCBB /* UIView+Extension.swift */,
+				7D1691AA27A583BA009F3D7C /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -469,12 +483,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D49FB1B27A4E0840096D00A /* AdCoverCell.swift in Sources */,
+				7D1691AB27A583BA009F3D7C /* UIViewController+Extension.swift in Sources */,
 				7D94C29727A43C2E00DFCCBB /* UIView+Extension.swift in Sources */,
 				7D94C26527A40C0800DFCCBB /* LoginViewController.swift in Sources */,
 				7D1A8DC827A45968006AB313 /* AdListResponse.swift in Sources */,
 				7D94C26127A40C0800DFCCBB /* AppDelegate.swift in Sources */,
 				7D94C29C27A44A6600DFCCBB /* DashboardViewController.swift in Sources */,
 				7D49FB2327A51E810096D00A /* AdDetailViewController.swift in Sources */,
+				7D4A34E527A5781F00EF6370 /* AppNavigation.swift in Sources */,
 				7D1A8DC227A44F93006AB313 /* AdBannerCollectionViewCell.swift in Sources */,
 				7D94C2A527A44C8800DFCCBB /* AdCellCollectionViewCell.swift in Sources */,
 			);
