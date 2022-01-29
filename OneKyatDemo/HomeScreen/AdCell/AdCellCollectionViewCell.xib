@@ -19,22 +19,22 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGz-sK-ryr">
-                        <rect key="frame" x="0.0" y="0.0" width="197" height="243"/>
+                        <rect key="frame" x="3" y="3" width="191" height="237"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vgx-uU-q4m">
-                                <rect key="frame" x="0.0" y="0.0" width="197" height="158"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vgx-uU-q4m">
+                                <rect key="frame" x="0.0" y="0.0" width="191" height="154"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DxK-Ti-PbG">
-                                <rect key="frame" x="10" y="168" width="177" height="65"/>
+                                <rect key="frame" x="10" y="164" width="171" height="63"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhH-eE-dBa">
-                                        <rect key="frame" x="0.0" y="0.0" width="177" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="31.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6x-lq-OGt">
-                                        <rect key="frame" x="0.0" y="32.5" width="177" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="31.5" width="171" height="31.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
@@ -58,13 +58,14 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="OGz-sK-ryr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9Xx-tM-mhs"/>
-                <constraint firstItem="OGz-sK-ryr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="W5V-IF-Xco"/>
-                <constraint firstAttribute="bottom" secondItem="OGz-sK-ryr" secondAttribute="bottom" id="ahm-xz-aLi"/>
-                <constraint firstAttribute="trailing" secondItem="OGz-sK-ryr" secondAttribute="trailing" id="w5X-31-LnY"/>
+                <constraint firstItem="OGz-sK-ryr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="9Xx-tM-mhs"/>
+                <constraint firstItem="OGz-sK-ryr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="W5V-IF-Xco"/>
+                <constraint firstAttribute="bottom" secondItem="OGz-sK-ryr" secondAttribute="bottom" constant="3" id="ahm-xz-aLi"/>
+                <constraint firstAttribute="trailing" secondItem="OGz-sK-ryr" secondAttribute="trailing" constant="3" id="w5X-31-LnY"/>
             </constraints>
             <size key="customSize" width="197" height="243"/>
             <connections>
+                <outlet property="adCellView" destination="OGz-sK-ryr" id="pgQ-R9-E7J"/>
                 <outlet property="imgAdPoster" destination="Vgx-uU-q4m" id="sRe-MN-TUT"/>
                 <outlet property="lblName" destination="yhH-eE-dBa" id="Vw9-fm-NKL"/>
                 <outlet property="lblPrice" destination="a6x-lq-OGt" id="H3p-Wy-LO4"/>
