@@ -15,10 +15,6 @@ class DashboardViewController: UIViewController {
     
     var adData: AdListResponse?
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,13 +25,13 @@ class DashboardViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.isHidden = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-//        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func onTouchLogoutBtn(_ sender: Any) {
@@ -117,6 +113,8 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
             self.navigationController?.pushViewController(adDetailVC, animated: true)
         }
     }
+    
+    
 }
 
 extension DashboardViewController: UICollectionViewDelegateFlowLayout {
@@ -132,10 +130,4 @@ extension DashboardViewController: UICollectionViewDelegateFlowLayout {
 
 extension DashboardViewController: UISearchBarDelegate {
     
-}
-
-extension UINavigationController {
-   open override var preferredStatusBarStyle: UIStatusBarStyle {
-      return topViewController?.preferredStatusBarStyle ?? .default
-   }
 }

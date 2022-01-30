@@ -19,10 +19,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="356" height="192"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-IP-TER">
-                        <rect key="frame" x="0.0" y="0.0" width="356" height="166"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-IP-TER">
+                        <rect key="frame" x="0.0" y="0.0" width="356" height="172"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ome-UD-8wq">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ome-UD-8wq">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -30,7 +30,10 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="kYW-rL-wBt">
-                        <rect key="frame" x="0.0" y="166" width="356" height="26"/>
+                        <rect key="frame" x="0.0" y="172" width="356" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="m6y-Tz-FGW"/>
+                        </constraints>
                         <color key="pageIndicatorTintColor" systemColor="systemGray3Color"/>
                         <color key="currentPageIndicatorTintColor" name="AccentColor"/>
                     </pageControl>

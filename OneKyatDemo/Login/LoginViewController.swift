@@ -38,10 +38,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

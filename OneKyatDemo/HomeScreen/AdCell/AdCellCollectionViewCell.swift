@@ -31,8 +31,8 @@ class AdCellCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        adCellView.addShadow()
         adCellView.layer.cornerRadius = 5
+        adCellView.clipsToBounds = true
     }
 
 }

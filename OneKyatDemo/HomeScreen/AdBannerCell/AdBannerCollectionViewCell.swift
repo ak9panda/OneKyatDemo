@@ -19,15 +19,13 @@ class AdBannerCollectionViewCell: UICollectionViewCell {
     private var currentPage = 0
     // timer for adbanner
     var carousalTimer: Timer?
-    var newOffsetX: CGFloat = 0.0
     
     var posterList: [String]? = [] {
         didSet {
             if let data = posterList {
+                carousalTimer?.invalidate()
                 bannerPageControl.numberOfPages = data.count
-                bannerPageControl.currentPage = 0
                 self.imgBannerCollectionView.reloadData()
-//                self.startTimer()
                 self.startScroll()
             }
         }
@@ -40,46 +38,26 @@ class AdBannerCollectionViewCell: UICollectionViewCell {
         imgBannerCollectionView.delegate = self
         imgBannerCollectionView.register(AdCoverCell.self, forCellWithReuseIdentifier: AdCoverCell.identifier)
     }
-
 }
 
 extension AdBannerCollectionViewCell {
-    func startTimer() {
-        carousalTimer = Timer(fire: Date(), interval: 0.025, repeats: true) { (timer) in
-            let initailPoint = CGPoint(x: self.newOffsetX,y :0)
-            if __CGPointEqualToPoint(initailPoint, self.imgBannerCollectionView.contentOffset) {
-                if self.newOffsetX < self.imgBannerCollectionView.contentSize.width {
-                    self.newOffsetX += 0.25
-                }
-                if self.newOffsetX > self.imgBannerCollectionView.contentSize.width - self.imgBannerCollectionView.frame.size.width {
-                    self.newOffsetX = 0
-                }
-                self.imgBannerCollectionView.contentOffset = CGPoint(x: self.newOffsetX,y :0)
-            } else {
-                self.newOffsetX = self.imgBannerCollectionView.contentOffset.x
-            }
-        }
-        RunLoop.current.add(carousalTimer!, forMode: .common)
+    
+    func startScroll() {
+        carousalTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.scrollToNextCell), userInfo: nil, repeats: true);
     }
     
     @objc func scrollToNextCell(){
-        
-        bannerPageControl.currentPage = currentPage
-        if currentPage == 7 {
+        if currentPage < posterList!.count - 1 {
+            currentPage = currentPage + 1
+        }else {
             currentPage = 0
         }
-        imgBannerCollectionView.isPagingEnabled = true
+        bannerPageControl.currentPage = currentPage
         imgBannerCollectionView.scrollToItem(
             at: IndexPath(item: currentPage, section: 0),
-            at: .centeredHorizontally,
+            at: .right,
             animated: true
         )
-        self.imgBannerCollectionView.setNeedsLayout()
-        currentPage += 1
-    }
-    
-    func startScroll() {
-        _ = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.scrollToNextCell), userInfo: nil, repeats: true);
     }
 }
 
@@ -105,12 +83,11 @@ extension AdBannerCollectionViewCell: UICollectionViewDataSource, UICollectionVi
 
 extension AdBannerCollectionViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width - 10;
-        return CGSize(width: width, height: collectionView.bounds.height)
+        return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

@@ -32,14 +32,12 @@ class AdDetailViewController: UIViewController {
         setupData(detail: adItemDetail)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        self.navigationController?.isNavigationBarHidden = true
+    @IBAction func onTouchBackBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.isNavigationBarHidden = false
+    @IBAction func onTouchPhCallBtn(_ sender: Any) {
+        self.dialNumber(number: "09420000002")
     }
 }
 
@@ -49,17 +47,6 @@ extension AdDetailViewController {
         tfMessage.layer.cornerRadius = tfMessage.bounds.height/2
         tfMessage.clipsToBounds = true
         messageView.addTopShadow()
-        if #available(iOS 15, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            UINavigationBar.appearance().standardAppearance = appearance
-            UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        }else {
-            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-            self.navigationController?.navigationBar.shadowImage = UIImage()
-            self.navigationController?.navigationBar.isTranslucent = true
-            self.navigationController?.view.backgroundColor = .clear
-        }
     }
     
     func setupData(detail: Ads?) {
@@ -77,4 +64,17 @@ extension AdDetailViewController {
             lblItemDescription.text = data.itemDescription
         }
     }
+    
+    func dialNumber(number : String) {
+         if let url = URL(string: "tel://\(number)"),
+           UIApplication.shared.canOpenURL(url) {
+              if #available(iOS 10, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler:nil)
+               } else {
+                   UIApplication.shared.openURL(url)
+               }
+           } else {
+               self.showAlertOneBtn(title: "Error", message: "Something went wrong")
+           }
+        }
 }
