@@ -54,12 +54,12 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func onTouchLoginBtn(_ sender: Any) {
-//        if tfPhoneNo.text == "09420000001" && tfPassword.text == "password_123$#" {
-//            didCompleteLogin()
-//        } else {
-//            self.showAlertOneBtn(title: "Error", message: "User name or password is incorrect!")
-//        }
-        didCompleteLogin()
+        if tfPhoneNo.text == "09420000001" && tfPassword.text == "password_123$#" {
+            didCompleteLogin()
+        } else {
+            self.showAlertOneBtn(title: "Error", message: "User name or password is incorrect!")
+        }
+//        didCompleteLogin()
     }
     
     @IBAction func onTouchTandCBtn(_ sender: Any) {
@@ -75,6 +75,7 @@ class LoginViewController: UIViewController {
     }
 }
 
+// MARK: - Helper Functions
 extension LoginViewController {
     func checkLoginData() {
         if checkPhoneNo && checkPassword && checkTandCBox {
@@ -95,6 +96,7 @@ extension LoginViewController {
     }
 }
 
+// MARK: - UITextField Delegate
 extension LoginViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         switch textField {

@@ -13,14 +13,21 @@ class DashboardViewController: UIViewController {
     
     lazy var searchBar = UISearchBar(frame: CGRect.zero)
     
-    var adData: AdListResponse?
+    var presenter: DashboardPresenterProtocol?
+    var adData: AdListResponse? {
+        didSet {
+            if let _ = adData {
+                self.adCollectionView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initView()
-        initData()
-        
+        setupView()
+        self.presenter?.fetchAdData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,56 +37,35 @@ class DashboardViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func onTouchLogoutBtn(_ sender: Any) {
         self.showAlertTwoBtn(title: "Logout?", message: "Are you sure.") { _ in
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let appNavigation = AppNavigation(window: appDelegate.window!)
-            appNavigation.LogOutComplete()
+            self.presenter?.handleLogout()
         }
     }
 }
 
 // MARK: - Helper Functions
 extension DashboardViewController {
-    func initData() {
-        if let path = Bundle.main.path(forResource: "OneKyatAd", ofType: "json") {
-            do {
-                let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-                do {
-                    adData = try JSONDecoder().decode(AdListResponse.self, from: jsonData)
-                    adCollectionView.reloadData()
-                }catch {
-                    
-                }
-            } catch let error {
-                print("parse error: \(error.localizedDescription)")
-            }
-        } else {
-            print("Invalid filename/path.")
-        }
-    }
-    
-    func initView() {
+    // setup viper protocols here
+    private func initView() {
+        let presenter = DashboardPresenter()
+        let interactor = DashboardInteractor()
+        let router = DashboardRouter()
         
-        searchBar.searchTextField.placeholder = "Search at OneKyat"
-        searchBar.searchTextField.backgroundColor = .white
-        searchBar.delegate = self
-        navigationItem.titleView = searchBar
-        navigationItem.backButtonTitle = ""
+        presenter.router = router
+        presenter.interactor = interactor
+        presenter.view = self
         
-        adCollectionView.dataSource = self
-        adCollectionView.delegate = self
-        let adBannerCell = UINib(nibName: AdBannerCollectionViewCell.identifier, bundle: nil)
-        adCollectionView.register(adBannerCell, forCellWithReuseIdentifier: AdBannerCollectionViewCell.identifier)
-        let adCell = UINib(nibName: AdCellCollectionViewCell.identifier, bundle: nil)
-        adCollectionView.register(adCell, forCellWithReuseIdentifier: AdCellCollectionViewCell.identifier)
+        interactor.presenter = presenter
+        
+        self.presenter = presenter
     }
 }
 
+// MARK: - UICollectionView Delegate
 extension DashboardViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
@@ -108,13 +94,10 @@ extension DashboardViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let adDetail = adData?.adList[indexPath.row]
-        if let adDetailVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: AdDetailViewController.self)) as? AdDetailViewController {
-            adDetailVC.adItemDetail = adDetail
-            self.navigationController?.pushViewController(adDetailVC, animated: true)
+        if let data = adDetail {
+            presenter?.showAdDetail(viewController: self, data: data)
         }
     }
-    
-    
 }
 
 extension DashboardViewController: UICollectionViewDelegateFlowLayout {
@@ -126,8 +109,4 @@ extension DashboardViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: width, height: width * 1.2)
         }
     }
-}
-
-extension DashboardViewController: UISearchBarDelegate {
-    
 }

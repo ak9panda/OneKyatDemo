@@ -79,6 +79,11 @@ extension AdBannerCollectionViewCell: UICollectionViewDataSource, UICollectionVi
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        currentPage = indexPath.row
+        bannerPageControl.currentPage = currentPage
+    }
 }
 
 extension AdBannerCollectionViewCell: UICollectionViewDelegateFlowLayout {
