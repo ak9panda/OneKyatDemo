@@ -12,6 +12,6 @@
 ## Screenshots
 <p align="center">
   <img src="./Screenshots/screenshot1.png" width="350" title="Screen 1" alt="Screen 1">
-  <img src="./Screenshots/screenshot2.png width="350" title="Screen 2" alt="Screen 2">
-  <img src="./Screenshots/screenshot3.png width="350" title="Screen 3" alt="Screen 3">
+  <img src="./Screenshots/screenshot2.png" width="350" title="Screen 2" alt="Screen 2">
+  <img src="./Screenshots/screenshot3.png" width="350" title="Screen 3" alt="Screen 3">
 </p>
