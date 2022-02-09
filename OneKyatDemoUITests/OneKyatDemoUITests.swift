@@ -30,6 +30,45 @@ class OneKyatDemoUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+    
+    func testInvalidLogin_errorCredentialsAlertShown() {
+        
+        let validUsername = "09420035475"
+        let validPassword = "password"
+        
+        let app = XCUIApplication()
+        app.activate()
+        let phoneNumberTextField = app.textFields["Phone number"]
+        phoneNumberTextField.tap()
+        phoneNumberTextField.typeText(validUsername)
+        let passwordTextField = app.secureTextFields["Password"]
+        passwordTextField.tap()
+        passwordTextField.typeText(validPassword)
+        app/*@START_MENU_TOKEN@*/.buttons["Done"]/*[[".keyboards",".buttons[\"done\"]",".buttons[\"Done\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.buttons["checkbox empty"].tap()
+        app.buttons["log in"].tap()
+        let alertDialog = app.alerts["Error"]
+        XCTAssertTrue(alertDialog.exists)
+        alertDialog.scrollViews.otherElements.buttons["Ok"].tap()
+    }
+    
+    func testValidLoginSuccess() {
+        
+        let validUsername = "09420000001"
+        let validPassword = "password_123$#"
+        
+        let app = XCUIApplication()
+        app.activate()
+        let phoneNumberTextField = app.textFields["Phone number"]
+        phoneNumberTextField.tap()
+        phoneNumberTextField.typeText(validUsername)
+        let passwordTextField = app.secureTextFields["Password"]
+        passwordTextField.tap()
+        passwordTextField.typeText(validPassword)
+        XCUIApplication()/*@START_MENU_TOKEN@*/.buttons["Done"]/*[[".keyboards",".buttons[\"done\"]",".buttons[\"Done\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.buttons["checkbox empty"].tap()
+        app.buttons["log in"].tap()
+    }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
